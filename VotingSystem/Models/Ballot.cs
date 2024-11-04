@@ -8,5 +8,6 @@ namespace VotingSystem.Models
 {
     internal class Ballot
     {
+     
     }
 }

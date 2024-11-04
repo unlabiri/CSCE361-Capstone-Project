@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class Form1 : Form
+    public partial class PacVote : Form
     {
-        public Form1()
+        public PacVote()
         {
             InitializeComponent();
+        }
+
+        private void PacVote_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

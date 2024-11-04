@@ -1,6 +1,6 @@
 ﻿namespace VotingSystem
 {
-    partial class Form1
+    partial class PacVote
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // PacVote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 496);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(897, 496);
+            this.Name = "PacVote";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.PacVote_Load);
             this.ResumeLayout(false);
 
         }

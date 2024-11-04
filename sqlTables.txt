@@ -1,0 +1,18 @@
+Tables: Users, Elections, CastVotes, candidates, districts?, districtZips?
+
+Users table: PRIMARY KEY--> userID (incrementing int), firstName (varchar 32), lastName (varchar 32), 
+	voterID (12 digit int), username (varchar 16), password (varchar 32), address (string 64), zipcode (int), birthdate (string)
+
+-- used to store all of the voters in the system, as well as their account and personal info 
+
+Elections table: PRIMARY KEY --> electionID (incrementing int), voteName (string), voteDuration (datetime), 
+
+-- table used to store all of the current elections that voters are voting on
+
+CastVotes table: PRIMARY KEY --> voterID AND electionID (foreign keys from the elections and users table), vote (String), candidateID(incrementing int)
+
+-- table used to store the actual votes cast by each voter and the candidate they voted for
+
+Candidates table: PRIMARY KEY --> candidateID (incrementing int) AND electionID FORIEGN KEY (int), 
+
+--table used to store all of the candidates elligible to be voted for in all elections

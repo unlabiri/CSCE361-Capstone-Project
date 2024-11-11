@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-name: Ada Aljabiri dated: 11/11/2024
+// name: Ada Aljabiri dated: 11/11/2024
+ // Not a model class   
 namespace VotingSystem.Models
 {
     internal class Results

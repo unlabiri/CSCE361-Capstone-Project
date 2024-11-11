@@ -1,10 +1,5 @@
 Voting System for the City of Pacopolis
-Authors:
-Ada Aljabiri
-Jason DiBraccio
-Riley Camelin
-Sean Casey
-Zephyr Rose
+Authors: Ada Aljabiri Jason DiBraccio Riley Camelin Sean Casey Zephyr Rose
 
 This project is an electronic voting system developed for the city of Pacopolis for current and future elections. The system is designed to support election types, including the election deciding the mayor between Pat Mann and Dawn Keykong, as well as future local issues. The system is accessible to voters through their personal computers or via shared computers at polling locations.
 Voters are authenticated on logging in - only registered voters can cast a ballot.

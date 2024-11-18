@@ -1,16 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage';
-import LoginPage from './LoginPage';
-import AccountPage from './AccountPage';
-import ElectionsPage from './ElectionsPage';
-import PastElectionsPage from './PastElectionsPage';
-import BallotPage from './BallotPage';
-import VoteConfirmationPage from './VoteConfirmationPage';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import AccountPage from './pages/AccountPage';
+import ElectionsPage from './pages/ElectionsPage';
+import PastElectionsPage from './pages/PastElectionsPage';
+import BallotPage from './pages/BallotPage';
+import VoteConfirmationPage from './pages/VoteConfirmationPage';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />

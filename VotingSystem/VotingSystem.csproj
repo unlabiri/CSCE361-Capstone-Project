@@ -58,7 +58,9 @@
     </Compile>
     <Compile Include="Models\Ballot.cs" />
     <Compile Include="Models\Results.cs" />
-    <Compile Include="Models\Voter.cs" />
+	  <Compile Include="Models\Candidate.cs" />
+	  <Compile Include="Models\CastBallot.cs" />
+	  <Compile Include="Models\Voter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PacVote.resx">

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VotingSystem.Models;
 //captures vote data, deals with not allowing duplicate votes
 //author: Ada Aljabiri dated 11/11/2024
 namespace VotingSystem.Models
 {
-    internal class CastBallot
+    public class CastBallot
     {
         public int VoterID { get; set; }
         public int ElectionID { get; set; }

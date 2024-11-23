@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VotingSystem.Models;
 // author: Ada Aljabiri dated 11/10/2024
 
 namespace VotingSystem.Models

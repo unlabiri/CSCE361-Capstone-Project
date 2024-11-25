@@ -15,7 +15,7 @@ namespace VotingSystem
         //allows a new user to be added, will eventually take many arguments
         public static bool AddNewUser()
         {
-            return False;
+            return false;
     }
 
         //allows a user to be deleted, will take the userID as argument
@@ -28,14 +28,14 @@ namespace VotingSystem
 
         public static string GetName()
         {
-            return Null;
+            return null;
         }
 
         //returns the user's voter ID from the database, will take userID as an argument
 
         public static int GetVoterId()
         {
-            return Null; 
+            return null; 
         }
     }
 

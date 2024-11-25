@@ -35,7 +35,7 @@ namespace VotingSystem
 
         public static int GetVoterId(int userId)
         {
-            return null; 
+            return 0; 
         }
     }
 

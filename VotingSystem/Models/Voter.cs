@@ -16,17 +16,19 @@ namespace VotingSystem.Models
         public DateTime RegistrationDate { get; set; }
         public string PhoneNumber { get; set; }
         public int UserId { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
         public string ZipCode { get; set; }
 
         //initializes a voter Object
-        public Voter(int userId, string firstName, string lastName, DateTime birthday, DateTime registrationDate, string phoneNumber, string password, string zipCode) {
+        public Voter(int userId, string firstName, string lastName, DateTime birthday, DateTime registrationDate, string phoneNumber, string username, string password, string zipCode) {
             UserId = userId;
             FirstName = firstName;
             LastName = lastName;
             Birthday = birthday;
             RegistrationDate = registrationDate;
             PhoneNumber = phoneNumber;
+            Username = username;
             Password = password;
             ZipCode = zipCode;
         }

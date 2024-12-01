@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 //Author: Zephyr Rose
 //Created 11/7/24
@@ -11,7 +12,27 @@ namespace VotingSystem
 {
     internal class GetDatabaseInfo
     {
+        public static void initDB()
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString =
+              "Data Source=ServerName;" +
+              "Initial Catalog=DataBaseName;" +
+              "User id=UserName;" +
+              "Password=Secret;";
+            conn.Open();
+        }
 
+
+        public static List<String> getVoters()
+        {
+            
+            return null;
+        }
+        
+        
+        
+        
         //allows a new user to be added, will eventually take many arguments
         public static bool AddNewUser(int userId, string firstName, string lastName, DateTime birthday, string phoneNumber, string username, string password, string zipCode, string voterVerificationNumber)
         {

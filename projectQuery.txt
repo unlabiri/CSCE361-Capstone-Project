@@ -1,0 +1,45 @@
+DROP TABLE IF EXISTS Election;
+DROP TABLE IF EXISTS CastVotes;
+DROP TABLE IF EXISTS Candidates;
+DROP TABLE IF EXISTS Voter;
+
+
+
+
+-- CONTAINS ALL USERS REGISTERED TO VOTE
+CREATE TABLE Voter(
+	VoterID int IDENTITY(1,1) PRIMARY KEY,
+	FirstName varchar(32) NOT NULL,
+	LastName varchar(32) NOT NULL,
+	VoterNum char(12) NOT NULL,
+	Username varchar(16) NOT NULL,
+	VoterPassword varchar(32) NOT NULL,
+	VoterAddress varchar(64) NOT NULL,
+	ZipCode char(5) NOT NULL,
+	Birthdate date NOT NULL
+)
+
+-- CONTAINS ALL CURRENT ELECTIONS
+CREATE TABLE Election(
+	ElectionID int IDENTITY(1,1) PRIMARY KEY,
+	VoteName varchar(32)
+)
+
+-- CONTAINS ALL VOTES CAST FOR ALL ELECTIONS
+CREATE TABLE CastVotes(
+	VoterID int REFERENCES Voter(VoterID) NOT NULL,
+	ElectionID int REFERENCES Election(ElectionID) NOT NULL,
+	PRIMARY KEY (VoterID, ElectionID)
+)
+
+-- HOLDS ALL CANDIDATES AND ISSUES FOR ALL ELECTIONS
+CREATE TABLE Candidates(
+	CandidateID int IDENTITY(1,1),
+	ElectionID int REFERENCES Election(ElectionID)
+)
+
+insert into Voter (FirstName, LastName, VoterNum, Username, VoterPassword, VoterAddress, ZipCode, Birthdate) values
+	('Zephyr', 'Rose', '000000000001', 'zramazing', 'password', '1234 Ave Ave', '68676', '2003-11-06'),
+	('Riley', 'Camelin', '000000000002', 'rcamelin', 'password', '1234 St St', '68658', '2002-11-26');
+
+SELECT * FROM Voter;

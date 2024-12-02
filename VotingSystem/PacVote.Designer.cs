@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 496);
             this.Name = "PacVote";
-            this.Text = "Form1";
+            this.Text = "PacVote - Voting System";
             this.Load += new System.EventHandler(this.PacVote_Load);
             this.ResumeLayout(false);
 

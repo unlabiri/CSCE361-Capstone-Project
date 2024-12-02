@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VotingSystem.Models;
 // name: Ada Aljabiri dated: 11/11/2024
- // Not a model class   
+// Not a model class   
 namespace VotingSystem.Models
 {
-    internal class Results
+    public class Results
     {
         // method that counts the votes from a list of CastBallot objects
-        public Dictionary<int, int> CountVotes(List<CastBallot> castBallots)
+        public Dictionary<int, int> CountVotes(List<VotingSystem.Models.CastBallot> castBallots)
         {
             // storage for each candidate's vote count
             Dictionary<int, int> voteCounts = new Dictionary<int, int>();

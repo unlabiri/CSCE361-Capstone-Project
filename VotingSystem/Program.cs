@@ -14,6 +14,7 @@ namespace VotingSystem
         [STAThread]
         static void Main()
         {
+            DatabaseInfo.initDB();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PacVote());

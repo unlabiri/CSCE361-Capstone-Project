@@ -4,29 +4,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Diagnostics;
+//using System.Data.SqlClient;
 
 //Author: Zephyr Rose
 //Created 11/7/24
 
 namespace VotingSystem
 {
-    internal class GetDatabaseInfo
+    internal class DatabaseInfo
     {
         public static void initDB()
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString =
-              "Data Source=ServerName;" +
-              "Initial Catalog=DataBaseName;" +
-              "User id=UserName;" +
-              "Password=Secret;";
-            conn.Open();
+            Debug.WriteLine("inside initDB");
+            try
+            {
+                SqlConnection conn = new SqlConnection();
+                conn.ConnectionString =
+              "Data Source=ZEPHYRLAPTOP\\ZRAMAZINGSQL;" +
+              "Initial Catalog=VotingSystem;" +
+              "User id=sa;" +
+              "Password=CSCE361TEST;" +
+              "TrustServerCertificate =True;";
+                conn.Open();
+                Debug.WriteLine("connection success!!");
+                initUsers(conn);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error connecting to server");
+                Debug.WriteLine(ex.Message);
+            }
         }
 
 
-        public static List<String> getVoters()
+        public static List<String> initUsers(SqlConnection conn)
         {
-            
+            using (SqlCommand command = new SqlCommand("SELECT * FROM VOTER", conn))
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Debug.WriteLine("{0} {1} {2}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                }
+            }
+            //List<String>[] voterList = new List<String>[];
             return null;
         }
         

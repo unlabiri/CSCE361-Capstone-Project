@@ -12,12 +12,32 @@ function Confirm() {
             <div className="header-container">
                 <img src={logo} className="confirm-logo" alt="PacVote Logo" />
                 <h1 className="confirm-title">Your vote has been submitted. Thank you for voting!</h1>
+            </div>
+
+            <div className="confirm-box">
+                <h2 className="box-title">Mayoral Election:</h2>
+                <div className="confirm-row">
+                    <span>• You chose: *Candidate*.</span>
+                </div>
+            </div>
+
+            <div className="confirm-box">
+                <h2 className="box-title">Issue #1:</h2>
+                <div className="confirm-row">
+                    <span>• You chose: *Issue*.</span>
+                </div>
+            </div>
+
+            <div className="button-container">
+                <button className="home-button">Home Page</button>
+                <div className="divider"></div>
                 <button className="logout-button">Logout</button>
             </div>
 
             <button onClick={clickMe} className="info-button">
                 Info
             </button>
+
         </div>
     );
 }

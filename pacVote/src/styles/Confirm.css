@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.Home-container {
+.confirm-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +42,12 @@ body {
   flex-grow: 1;
 }
 
-.logout-button {
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button, .home-button {
   background-color: #223a78;
   color: white;
   border: none;
@@ -54,6 +59,12 @@ body {
 
 .logout-button:hover {
   background-color: #34495e;
+}
+
+.divider{
+  width:20px;
+  height:auto;
+  display:inline-block;
 }
 
 .confirm-box {
@@ -80,7 +91,7 @@ body {
   text-align: left;
 }
 
-.vote-row, .results-row {
+.confirm-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +119,7 @@ body {
   font-size: 16px;
 }
 
-.logout-button, .vote-button, .results-button {
+.logout-button, .home-button {
   background-color: black;
   color: white;
   border: none;
@@ -118,7 +129,7 @@ body {
   transition: all .5s ease;
 }
 
-.logout-button:hover, .vote-button:hover, .results-button:hover {
+.logout-button:hover, .home-button:hover {
   outline: 2px solid white; 
   color: white; 
 }

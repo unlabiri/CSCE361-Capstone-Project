@@ -12,6 +12,8 @@ function Results() {
             <div className="header-container">
                 <img src={logo} className="results-logo" alt="PacVote Logo" />
                 <h1 className="results-title">PacVote - Election Results - Date</h1>
+                <button className="home-button">Home Page</button>
+                <div className="divider"></div>
                 <button className="logout-button">Logout</button>
             </div>
 

@@ -42,7 +42,7 @@ body {
   flex-grow: 1;
 }
 
-.logout-button {
+.logout-button, .home-button {
   background-color: #223a78;
   color: white;
   border: none;
@@ -52,8 +52,14 @@ body {
   cursor: pointer;
 }
 
-.logout-button:hover {
+.logout-button:hover, .home-button:hover {
   background-color: #34495e;
+}
+
+.divider{
+  width:20px;
+  height:auto;
+  display:inline-block;
 }
 
 .results-box {

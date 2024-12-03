@@ -1,6 +1,135 @@
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.confirm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  position: relative;
+  gap: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.confirm-logo {
+  width: 160px;
+  height: auto;
+}
+
+.confirm-title {
+  font-size: 32px;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button, .home-button {
+  background-color: #223a78;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #34495e;
+}
+
+.divider{
+  width:20px;
+  height:auto;
+  display:inline-block;
+}
+
+.confirm-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: #223a78;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 80%;
+  font-size: 18px;
+}
+
+.box-title {
+  margin: 0;
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+  width: 100%;
+  text-align: left;
+}
+
+.confirm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.vote-button, .results-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.info-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #223a78;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.logout-button, .home-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.logout-button:hover, .home-button:hover {
+  outline: 2px solid white; 
+  color: white; 
+}

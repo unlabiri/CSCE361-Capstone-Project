@@ -1,20 +1,34 @@
 import React from "react";
 import logo from '../assets/logo.png';
 import '../styles/Review.css';
+import { useNavigate } from "react-router-dom";
 
 function clickMe() {
     alert('PacVote is an online voting system app for citizens of Pacopolis!');
 }
 
 function Review() {
+    const navigate = useNavigate();
+    
+    const goToHome = () => {
+      navigate("/home");
+    };
+
+    const goToBallot = () => {
+        navigate("/ballot");
+      };
+
+      const goToConfirm = () => {
+        navigate("/confirm");
+      };
+
     return (
         <div className="review-container">
             <div className="header-container">
                 <img src={logo} className="review-logo" alt="PacVote Logo" />
                 <h1 className="review-title">Review your ballot before submitting.</h1>
-                <button className="home-button">Home Page</button>
+                <button onClick={goToHome} className="home-button">Home Page</button>
                 <div className="divider"></div>
-                <button className="logout-button">Logout</button>
             </div>
 
             <div className="review-box">
@@ -32,11 +46,11 @@ function Review() {
             </div>
 
             <div className="button-container">
-                <button className="edit-button">
+                <button onClick={goToBallot} className="edit-button">
                     Edit my ballot.
                 </button>
                 <div className="divider"></div>
-                <button className="submit-button">
+                <button onClick={goToConfirm} className="submit-button">
                     Submit my vote!
                 </button>
             </div>

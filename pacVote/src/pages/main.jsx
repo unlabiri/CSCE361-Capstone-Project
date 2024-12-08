@@ -1,16 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '../styles/index.css'
-import Login from './Login.jsx'
-import CreateAccount from './CreateAccount.jsx'
-import Home from './Home.jsx'
-import Results from './Results.jsx'
-import Confirm from './Confirm.jsx'
-import Review from './Review.jsx'
-import Ballot from './Ballot.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import '../styles/index.css';  // This remains unchanged, as it's in the styles folder
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';  // Updated to reflect that App is inside the pages folder
 
-createRoot(document.getElementById('root')).render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <StrictMode>
-    <Home /> 
-  </StrictMode>,
-)
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
+);

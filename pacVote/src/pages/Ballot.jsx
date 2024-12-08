@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../assets/logo.png';
 import '../styles/Ballot.css';
+import { useNavigate } from "react-router-dom";
 
 function clickMe() {
     alert('PacVote is an online voting system app for citizens of Pacopolis!');
@@ -11,14 +12,23 @@ function clickInfo() { // edit to display candidate and issue information
 }
 
 function Ballot() {
+    const navigate = useNavigate();
+    
+    const goToHome = () => {
+      navigate("/home");
+    };
+
+    const goToReview = () => {
+        navigate("/review");
+      };
+
     return (
         <div className="ballot-container">
             <div className="header-container">
                 <img src={logo} className="ballot-logo" alt="PacVote Logo" />
                 <h1 className="ballot-title">PacVote - General Election - Date</h1>
-                <button className="home-button">Home Page</button>
+                <button onClick={goToHome} className="home-button">Home Page</button>
                 <div className="divider"></div>
-                <button className="logout-button">Logout</button>
             </div>
 
             <form className="ballot-form">
@@ -50,7 +60,7 @@ function Ballot() {
             </form>
 
             <div className="button-container">
-                <button className="edit-button">
+                <button onClick={goToReview} className="edit-button">
                     Continue to Review
                 </button>
             </div>

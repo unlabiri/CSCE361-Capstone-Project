@@ -1,12 +1,19 @@
 import React from "react";
 import logo from '../assets/logo.png';
 import '../styles/Confirm.css';
+import { useNavigate } from "react-router-dom";
 
 function clickMe() {
     alert('PacVote is an online voting system app for citizens of Pacopolis!');
 }
 
 function Confirm() {
+    const navigate = useNavigate();
+    
+    const goToHome = () => {
+      navigate("/home");
+    };
+
     return (
         <div className="confirm-container">
             <div className="header-container">
@@ -29,9 +36,7 @@ function Confirm() {
             </div>
 
             <div className="button-container">
-                <button className="home-button">Home Page</button>
-                <div className="divider"></div>
-                <button className="logout-button">Logout</button>
+                <button onClick={goToHome} className="home-button">Home Page</button>
             </div>
 
             <button onClick={clickMe} className="info-button">

@@ -1,12 +1,23 @@
 import React from "react";
 import logo from '../assets/logo.png';
 import '../styles/CreateAccount.css';
+import { useNavigate } from "react-router-dom";
 
 function clickMe() {
   alert('PacVote is an online voting system app for citizens of Pacopolis!');
 }
 
 function CreateAccount() {
+  const navigate = useNavigate();
+  
+  const goToLogin = () => {
+    navigate("/login");
+  };
+
+  const goToHome = () => {
+    navigate("/home");
+  };
+  
   return (
     <div className="create-container">
       <img src={logo} className="create-logo" alt="PacVote Logo" />
@@ -56,8 +67,8 @@ function CreateAccount() {
         </form>
 
         <div className="login-buttons">
-          <button className="login-button">Back to Login</button>
-          <button className="login-button">Create Account</button>
+          <button onClick={goToLogin} className="login-button">Back to Login</button>
+          <button onClick={goToHome} className="login-button">Create Account</button>
         </div>
       </div>
       <button onClick={clickMe} className="info-button">

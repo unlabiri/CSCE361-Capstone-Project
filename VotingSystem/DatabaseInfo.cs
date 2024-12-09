@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Linq.Expressions;
 //using System.Data.SqlClient;
 
 //Author: Zephyr Rose
@@ -28,7 +29,15 @@ namespace VotingSystem
               "TrustServerCertificate =True;";
                 conn.Open();
                 Debug.WriteLine("connection success!!");
-                initUsers(conn);
+                List<Voter> voterList = new List<Voter>(155); 
+                voterList = initUsers(conn);
+                foreach (Voter voter in voterList)
+                {
+                    Debug.Write("Voter: ");
+                    Debug.Write(voter.FirstName);
+                    Debug.Write(voter.LastName);
+                    Debug.WriteLine(voter.Username);
+                }
             }
             catch (Exception ex)
             {
@@ -38,18 +47,20 @@ namespace VotingSystem
         }
 
 
-        public static List<String> initUsers(SqlConnection conn)
+        public static List<Voter> initUsers(SqlConnection conn)
         {
+            List<Voter> voterList = new List<Voter>(155);
             using (SqlCommand command = new SqlCommand("SELECT * FROM VOTER", conn))
             using (SqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    Debug.WriteLine("{0} {1} {2}", reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                    //Debug.WriteLine("{0} {1} {2}", reader.GetInt32(3), reader.GetString(4), reader.GetString(5));
+                    Voter voter = new Voter(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(8), reader.GetString(7), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(3));
+                    voterList.Add(voter);
                 }
             }
-            //List<String>[] voterList = new List<String>[];
-            return null;
+            return voterList;
         }
         
         

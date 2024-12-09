@@ -30,6 +30,35 @@ body {
   z-index: 100;
 }
 
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.divider{
+  width:20px;
+  height:auto;
+  display:inline-block;
+}
+
+.id-label {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.id-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; 
+}
+
+.form-row {
+  display: flex;
+  gap: 20px; 
+}
+
 .review-logo {
   width: 160px;
   height: auto;
@@ -42,7 +71,7 @@ body {
   flex-grow: 1;
 }
 
-.logout-button {
+.logout-button, .home-button {
   background-color: #223a78;
   color: white;
   border: none;
@@ -52,7 +81,7 @@ body {
   cursor: pointer;
 }
 
-.logout-button:hover {
+.logout-button:hover, .home-button:hover {
   background-color: #34495e;
 }
 
@@ -87,17 +116,7 @@ body {
   width: 100%;
 }
 
-.vote-button, .results-button {
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.info-button, .submit-button {
+.info-button, .submit-button, .edit-button {
   margin-top: 20px;
   padding: 10px 20px;
   cursor: pointer;
@@ -106,19 +125,4 @@ body {
   border: none;
   border-radius: 20px;
   font-size: 16px;
-}
-
-.logout-button{
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: all .5s ease;
-}
-
-.logout-button:hover{
-  outline: 2px solid white; 
-  color: white; 
 }
